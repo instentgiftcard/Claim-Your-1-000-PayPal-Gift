@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your $1,000 PayPal Gift</title>
+    <style>
+        /* Reset and basic styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(180deg, #1A73E8, #42A5F5);
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .paypal-logo {
+            width: 100px;
+            height: auto;
+            margin: 10px auto;
+        }
+
+        .email-form {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .email-form input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); }
+            50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.9); }
+        }
+
+        .email-form button {
+            width: 100%;
+            padding: 15px;
+            background: #004B9C;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, transform 0.2s ease;
+        }
+
+        .email-form button:hover {
+            background: #003087;
+            transform: scale(1.05);
+        }
+
+        .offer-details {
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .social-proof {
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            font-size: 1.1rem;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .countdown {
+            font-size: 1.5rem;
+            margin: 10px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Title -->
+    <h1>Claim Your $1,000 PayPal Gift</h1>
+    <img src="https://i.ibb.co/7pyBV06/b62bb22a64ce.gif" alt="PayPal Logo" class="paypal-logo">
+
+    <!-- Email Form -->
+    <div class="container">
+        <div class="email-form">
+            <input type="email" placeholder="Enter your email" id="email" required>
+            <button onclick="submitEmail()">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Offer Details -->
+    <div class="offer-details">
+        <h2>Limited Time Offer!</h2>
+        <p>Don't miss out on your chance to win a $1,000 PayPal gift card. Offer valid while stocks last!</p>
+    </div>
+
+    <!-- Social Proof -->
+    <div class="social-proof">
+        <p>7,238 people have already claimed this offer!</p>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown" id="countdown"></div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <p>Congratulations! Someone just claimed $1,000!</p>
+    </div>
+
+    <script>
+        // Countdown Timer
+        const countdownElement = document.getElementById("countdown");
+        let time = 3600;
+
+        function updateCountdown() {
+            const minutes = Math.floor(time / 60);
+            const seconds = time % 60;
+            countdownElement.textContent = `Time left: ${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+            time--;
+            if (time < 0) time = 3600;
+        }
+        setInterval(updateCountdown, 1000);
+
+        // Email Submission
+        function submitEmail() {
+            const email = document.getElementById("email").value;
+            if (email) {
+                window.location.href = `https://go4affm.com/c/?p=40201&o=20852&subid=1234`;
+            } else {
+                alert("Please enter your email!");
+            }
+        }
+
+        // Popup Notification
+        setTimeout(() => {
+            document.getElementById("popup").style.display = "block";
+        }, 5000);
+    </script>
+</body>
+</html>
